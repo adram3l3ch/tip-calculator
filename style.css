@@ -44,8 +44,14 @@ input.error {
     outline-color: rgb(255, 66, 66);
 }
 
+input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 label {
@@ -85,6 +91,7 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.123);
+    margin-bottom: 2rem;
 }
 
 .splitter__left form {
