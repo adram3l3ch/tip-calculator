@@ -16,8 +16,9 @@
         <header>
             <img src="./images/logo.svg" alt="logo" />
         </header>
-        <div class="splitter">
-            <div class="splitter__left">
+        <main class="splitter">
+            <section class="splitter__left">
+                <h2 class="hide">Splitter Form</h2>
                 <form>
                     <label for="bill">Bill <span>Can't be zero</span></label>
                     <input
@@ -47,8 +48,9 @@
                         class="people"
                     />
                 </form>
-            </div>
-            <div class="splitter__right">
+            </section>
+            <section class="splitter__right">
+                <h2 class="hide">Splitter Result</h2>
                 <div class="result tip">
                     <div>
                         <h2>Tip Amount</h2>
@@ -64,8 +66,8 @@
                     <p class="amount">$0.00</p>
                 </div>
                 <button type="reset" class="reset-btn">Reset</button>
-            </div>
-        </div>
+            </section>
+        </main>
         <script src="./script.js"></script>
     </body>
 </html>
