@@ -5,8 +5,9 @@ const billInput = document.querySelector("#bill");
 const peopleInput = document.querySelector("#people");
 const tipAmount = document.querySelector(".tip .amount");
 const totalAmount = document.querySelector(".total .amount");
+const resetBtn = document.querySelector(".reset-btn");
 
-const values = {
+let values = {
     tip: 0,
     bill: 0,
     people: 1,
@@ -56,9 +57,26 @@ const setFromInput = (e, data) => {
     calculate();
 };
 
+const reset = () => {
+    tipInput.value = "";
+    billInput.value = "";
+    peopleInput.value = "";
+    values = {
+        tip: 0,
+        bill: 0,
+        people: 1,
+    };
+    document.querySelector(".tip-btn.active")?.classList.remove("active");
+    setError("tip", false);
+    setError("bill", false);
+    setError("people", false);
+    calculate();
+};
+
 // Event listeners
 
 tipBtns.forEach((tipBtn) => tipBtn.addEventListener("click", setTipFromBtn));
+resetBtn.addEventListener("click", reset);
 tipInput.addEventListener("input", (e) => setFromInput(e, "tip"));
 billInput.addEventListener("input", (e) => setFromInput(e, "bill"));
 peopleInput.addEventListener("input", (e) => setFromInput(e, "people"));
