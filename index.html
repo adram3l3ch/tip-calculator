@@ -10,9 +10,61 @@
             href="./images/favicon-32x32.png"
         />
         <title>Frontend Mentor | Tip calculator app</title>
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount / person
-        Total / person Reset -->
+        <header>
+            <img src="./images/logo.svg" alt="logo" />
+        </header>
+        <div class="splitter">
+            <div class="splitter__left">
+                <form>
+                    <label for="bill">Bill <span>Can't be zero</span></label>
+                    <input
+                        type="number"
+                        id="bill"
+                        placeholder="0"
+                        required
+                        class="bill"
+                    />
+                    <label for="tip">Select Tip % <span>Can't be zero</span></label>
+                    <div class="tips">
+                        <button class="tip-btn active">5%</button>
+                        <button class="tip-btn">10%</button>
+                        <button class="tip-btn">15%</button>
+                        <button class="tip-btn">25%</button>
+                        <button class="tip-btn">50%</button>
+                        <input type="number" id="tip" placeholder="Custom" />
+                    </div>
+                    <label for="people"
+                        >Number of People <span>Can't be zero</span></label
+                    >
+                    <input
+                        type="number"
+                        id="people"
+                        placeholder="0"
+                        required
+                        class="people"
+                    />
+                </form>
+            </div>
+            <div class="splitter__right">
+                <div class="result tip">
+                    <div>
+                        <h2>Tip Amount</h2>
+                        <p>/person</p>
+                    </div>
+                    <p class="amount">$0.00</p>
+                </div>
+                <div class="result total">
+                    <div>
+                        <h2>Total</h2>
+                        <p>/person</p>
+                    </div>
+                    <p class="amount">$0.00</p>
+                </div>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </div>
     </body>
 </html>

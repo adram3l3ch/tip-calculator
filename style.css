@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    font-family: "Space Mono", monospace;
+}
+
+label {
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    justify-content: space-between;
+}
+
+label span {
+    color: rgb(255, 66, 66);
+    display: none;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    font-family: inherit;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+* + label {
+    margin-top: 2rem;
+}
+
+input::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.tip-btn {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.splitter {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+}
+
+.splitter__left form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(3, 8.5rem);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.splitter__right {
+    background-color: hsl(183, 100%, 15%);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.result {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result h2 {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.result p {
+    color: hsl(184, 14%, 56%);
+    font-size: 0.8rem;
+}
+
+p.amount {
+    color: hsl(172, 67%, 45%);
+    font-size: 2.5rem;
+}
+
+.reset-btn {
+    margin-top: auto;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+}
+
+.active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+input.error {
+    outline-color: rgb(255, 66, 66);
+}
