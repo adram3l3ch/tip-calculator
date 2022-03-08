@@ -186,3 +186,8 @@ label:nth-of-type(3)::after {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.hide {
+    position: absolute;
+    left: -9999999px;
+}
