@@ -30,6 +30,10 @@ label span {
     display: none;
 }
 
+span.error {
+    display: inline;
+}
+
 input {
     padding: 0.5rem 1rem;
     border: none;
@@ -66,12 +70,13 @@ button {
 
 .splitter {
     background-color: white;
+    max-width: 1200px;
     padding: 2rem;
     border-radius: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    max-width: 1200px;
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.123);
 }
 
 .splitter__left form {
