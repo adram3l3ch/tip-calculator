@@ -91,7 +91,7 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.123);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .splitter__left form {
@@ -188,9 +188,30 @@ label:nth-of-type(3)::after {
     .splitter {
         grid-template-columns: 1fr;
         max-width: 600px;
+        margin-bottom: 0;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .splitter__left form {
+        margin: 0;
     }
     .tips {
         grid-template-columns: 1fr 1fr;
+    }
+    p.amount {
+        font-size: 2rem;
+    }
+    .result h2,
+    p {
+        font-size: 0.8rem;
+    }
+    .reset-btn {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 350px) {
+    :root {
+        font-size: 10px;
     }
 }
 
